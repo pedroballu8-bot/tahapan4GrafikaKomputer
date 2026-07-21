@@ -1,0 +1,88 @@
+# Compiled Object files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Executable files
+Museum3D
+Museum3D.exe
+*.out
+*.app
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+*.tmp
+
+# Build directories
+build/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Windows
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.manifest
+*.res
+
+# MacOS
+.DS_Store
+*.dSYM/
+
+# Linux
+core
+*.core
+
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.userosscache
+*.userprefs
+*.dbmdl
+*.dbproj.schemaview
+*.pix
+*.pidb
+*.ipch
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+*.log
+*.vspscc
+*.vssscc
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CMakeUserPresets.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Documentation build
+docs/_build/
+docs/html/
+docs/latex/
