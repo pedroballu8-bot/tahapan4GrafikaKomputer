@@ -3,6 +3,9 @@
 #include <cmath>
 #include <cstdlib>
 
+// === HAPUS definisi camera di sini ===
+// Camera camera;  // <-- HAPUS BARIS INI
+
 Camera::Camera() {
     camX = 0.0f;
     camY = 6.0f;

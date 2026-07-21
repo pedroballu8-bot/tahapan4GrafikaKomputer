@@ -17,4 +17,7 @@ public:
     void apply();
 };
 
+// === DEKLARASI EXTERN ===
+extern Camera camera;  // <-- TAMBAHKAN INI
+
 #endif

@@ -3,8 +3,19 @@
 #include "lighting.h"
 #include "textures.h"
 #include "museum.h"
+#include "collision.h"
+#include "objects.h"
 
+// === DEFINISI GLOBAL CAMERA ===
 Camera camera;
+
+// ============================================================
+// UPDATE ANIMASI - DIPANGGIL SETIAP FRAME
+// ============================================================
+void updateAnimation() {
+    animTime += 0.016f;  // Tambah waktu (sekitar 60fps)
+    updatePersonPositions();  // Update posisi orang berjalan
+}
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -12,6 +23,10 @@ void display() {
 
     camera.apply();
     setupLighting();
+    
+    // Update animasi sebelum menggambar
+    updateAnimation();
+    
     drawMuseum();
 
     glutSwapBuffers();
@@ -53,6 +68,8 @@ void init() {
     glShadeModel(GL_SMOOTH);
     
     loadTextures();
+    buildCollisionBoxes();
+    initPersonPositions();  // Inisialisasi posisi orang
     
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -64,7 +81,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1280, 720);
-    glutCreateWindow("Tahap 3 - Museum Smart City OpenGL dengan Lighting & Texture");
+    glutCreateWindow("Museum Smart City - Animasi & Interaksi");
 
     init();
     glutDisplayFunc(display);
